@@ -16,8 +16,9 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.size
 import androidx.compose.ui.Alignment
-import androidx.compose.ui.text.font.FontWeight
 import org.jetbrains.compose.resources.painterResource
 import reyhanramadhan.composeapp.generated.resources.Res
 import reyhanramadhan.composeapp.generated.resources.compose_multiplatform
@@ -79,6 +80,19 @@ fun CardButton(text: String, descText: String) {
             }
         }
     }
+}
+
+
+@Composable
+fun IconButton(){
+    Box(
+        modifier = Modifier
+            .size(40.dp)
+            .background(
+                color = Color(surfaceColor),
+                shape = RoundedCornerShape(7.dp)
+            )
+    ){  }
 }
 
 @Composable

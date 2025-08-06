@@ -16,9 +16,11 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import dev.chrisbanes.haze.HazeState
 
 @Composable
 fun App() {
+    val hazeState = remember { HazeState() }
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -55,8 +57,7 @@ fun App() {
             Row(
                 Modifier
                     .width(240.dp)
-                    .height(40.dp)
-                    .background(Color.Green),
+                    .height(40.dp),
                 horizontalArrangement = Arrangement.SpaceBetween,
                 verticalAlignment = Alignment.CenterVertically
             ){
@@ -95,6 +96,5 @@ fun App() {
                 descText = "Lorem ip sumaco siamet pler la gu cos peler.."
             )
         } // End CardButton-Group
-
     }
 }

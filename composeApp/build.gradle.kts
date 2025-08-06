@@ -30,7 +30,6 @@ kotlin {
     }
     
     sourceSets {
-        
         commonMain.dependencies {
             implementation(compose.runtime)
             implementation(compose.foundation)
@@ -40,6 +39,8 @@ kotlin {
             implementation(compose.components.uiToolingPreview)
             implementation(libs.androidx.lifecycle.viewmodel)
             implementation(libs.androidx.lifecycle.runtimeCompose)
+            implementation("dev.chrisbanes.haze:haze:1.6.9")
+
 
         }
         commonTest.dependencies {

@@ -14,9 +14,13 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import dev.chrisbanes.haze.HazeState
+import org.jetbrains.compose.resources.Font
+import reyhanramadhan.composeapp.generated.resources.Poppins_Medium
+import reyhanramadhan.composeapp.generated.resources.Res
 
 @Composable
 fun App() {
@@ -25,7 +29,7 @@ fun App() {
         modifier = Modifier
             .fillMaxSize()
             .background(Color.Gray)
-            .padding(start = 50.dp, end = 50.dp, top = 50.dp, bottom = 35.dp),
+            .padding(start = 50.dp, end = 50.dp, top = 40.dp, bottom = 35.dp),
         verticalArrangement = Arrangement.SpaceBetween,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
@@ -41,8 +45,7 @@ fun App() {
             Row(
                 Modifier
                     .fillMaxWidth()
-                    .height(80.dp)
-                    .background(Color.Blue),
+                    .height(80.dp),
                 horizontalArrangement = Arrangement.SpaceBetween,
                 verticalAlignment = Alignment.CenterVertically
             ){
@@ -52,10 +55,20 @@ fun App() {
                     fontFamily = PoppinsMediumFont(),
                     color = Color(color = onSurfaceColor)
                 )
-                Row(){}
+                Row(
+                    modifier = Modifier
+                        .width(140.dp)
+                        .height(40.dp),
+                    horizontalArrangement = Arrangement.SpaceBetween,
+                    verticalAlignment = Alignment.CenterVertically
+                ){
+                    IconButton()
+                    IconButton()
+                    IconButton()
+                }
             }
             Row(
-                Modifier
+                modifier = Modifier
                     .width(240.dp)
                     .height(40.dp),
                 horizontalArrangement = Arrangement.SpaceBetween,

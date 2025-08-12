@@ -14,13 +14,9 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import dev.chrisbanes.haze.HazeState
-import org.jetbrains.compose.resources.Font
 import org.jetbrains.compose.resources.painterResource
-import reyhanramadhan.composeapp.generated.resources.Poppins_Medium
 import reyhanramadhan.composeapp.generated.resources.Res
 import reyhanramadhan.composeapp.generated.resources.ic_email
 import reyhanramadhan.composeapp.generated.resources.ic_github
@@ -30,7 +26,6 @@ import reyhanramadhan.composeapp.generated.resources.ic_x_twitter
 
 @Composable
 fun App() {
-    val hazeState = remember { HazeState() }
     Column(
         modifier = Modifier
             .fillMaxSize()

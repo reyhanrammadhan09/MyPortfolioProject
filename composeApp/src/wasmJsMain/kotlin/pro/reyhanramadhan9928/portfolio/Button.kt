@@ -18,19 +18,14 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.size
-import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.graphics.painter.Painter
-import dev.chrisbanes.haze.HazeState
 import org.jetbrains.compose.resources.painterResource
 import reyhanramadhan.composeapp.generated.resources.Res
 import reyhanramadhan.composeapp.generated.resources.compose_multiplatform
 
 @Composable
-fun CardBlur() {}
-@Composable
 fun CardButton(text: String, descText: String) {
-    val hazeState = remember { HazeState() }
     Column(
         modifier = Modifier
             .width(290.dp)
@@ -107,9 +102,4 @@ fun IconButton(imgIcRes: Painter){
                 .size(24.dp)
         )
     }
-}
-
-@Composable
-fun IconButtonWithText() {
-
 }

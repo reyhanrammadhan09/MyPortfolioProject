@@ -20,6 +20,7 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.size
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
+import androidx.compose.ui.graphics.painter.Painter
 import dev.chrisbanes.haze.HazeState
 import org.jetbrains.compose.resources.painterResource
 import reyhanramadhan.composeapp.generated.resources.Res
@@ -89,7 +90,7 @@ fun CardButton(text: String, descText: String) {
 
 
 @Composable
-fun IconButton(){
+fun IconButton(imgIcRes: Painter){
     Box(
         modifier = Modifier
             .size(40.dp)
@@ -100,16 +101,15 @@ fun IconButton(){
         contentAlignment = Alignment.Center
     ){
         Image(
-            painter = painterResource(resource = Res.drawable.compose_multiplatform),
+            painter = imgIcRes,
             contentDescription = "Icon",
             modifier = Modifier
                 .size(24.dp)
-                .background(color = Color.White)
         )
     }
 }
 
 @Composable
-fun IconButtonWithText(){
+fun IconButtonWithText() {
 
 }

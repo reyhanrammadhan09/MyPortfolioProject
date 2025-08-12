@@ -19,8 +19,14 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import dev.chrisbanes.haze.HazeState
 import org.jetbrains.compose.resources.Font
+import org.jetbrains.compose.resources.painterResource
 import reyhanramadhan.composeapp.generated.resources.Poppins_Medium
 import reyhanramadhan.composeapp.generated.resources.Res
+import reyhanramadhan.composeapp.generated.resources.ic_email
+import reyhanramadhan.composeapp.generated.resources.ic_github
+import reyhanramadhan.composeapp.generated.resources.ic_instagram
+import reyhanramadhan.composeapp.generated.resources.ic_linkind
+import reyhanramadhan.composeapp.generated.resources.ic_x_twitter
 
 @Composable
 fun App() {
@@ -62,9 +68,15 @@ fun App() {
                     horizontalArrangement = Arrangement.SpaceBetween,
                     verticalAlignment = Alignment.CenterVertically
                 ){
-                    IconButton()
-                    IconButton()
-                    IconButton()
+                    IconButton(
+                        imgIcRes = painterResource(resource = Res.drawable.ic_email)
+                    )
+                    IconButton(
+                        imgIcRes = painterResource(resource = Res.drawable.ic_email)
+                    )
+                    IconButton(
+                        imgIcRes = painterResource(resource = Res.drawable.ic_email)
+                    )
                 }
             }
             Row(
@@ -74,11 +86,21 @@ fun App() {
                 horizontalArrangement = Arrangement.SpaceBetween,
                 verticalAlignment = Alignment.CenterVertically
             ){
-                IconButton()
-                IconButton()
-                IconButton()
-                IconButton()
-                IconButton()
+                IconButton(
+                    imgIcRes = painterResource(resource = Res.drawable.ic_email)
+                )
+                IconButton(
+                    imgIcRes = painterResource(resource = Res.drawable.ic_linkind)
+                )
+                IconButton(
+                    imgIcRes = painterResource(resource = Res.drawable.ic_github)
+                )
+                IconButton(
+                    imgIcRes = painterResource(resource = Res.drawable.ic_instagram)
+                )
+                IconButton(
+                    imgIcRes = painterResource(resource = Res.drawable.ic_x_twitter)
+                )
 
             }
         }

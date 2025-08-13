@@ -20,6 +20,8 @@ import org.jetbrains.compose.resources.painterResource
 import reyhanramadhan.composeapp.generated.resources.Res
 import reyhanramadhan.composeapp.generated.resources.ic_email
 import reyhanramadhan.composeapp.generated.resources.ic_github
+import reyhanramadhan.composeapp.generated.resources.ic_home
+import reyhanramadhan.composeapp.generated.resources.ic_information
 import reyhanramadhan.composeapp.generated.resources.ic_instagram
 import reyhanramadhan.composeapp.generated.resources.ic_linkind
 import reyhanramadhan.composeapp.generated.resources.ic_x_twitter
@@ -64,13 +66,16 @@ fun App() {
                     verticalAlignment = Alignment.CenterVertically
                 ){
                     IconButton(
+                        urlBrowser = null,
+                        imgIcRes = painterResource(resource = Res.drawable.ic_information)
+                    )
+                    IconButton(
+                        urlBrowser = null,
                         imgIcRes = painterResource(resource = Res.drawable.ic_email)
                     )
                     IconButton(
-                        imgIcRes = painterResource(resource = Res.drawable.ic_email)
-                    )
-                    IconButton(
-                        imgIcRes = painterResource(resource = Res.drawable.ic_email)
+                        urlBrowser = null,
+                        imgIcRes = painterResource(resource = Res.drawable.ic_home)
                     )
                 }
             }
@@ -82,18 +87,23 @@ fun App() {
                 verticalAlignment = Alignment.CenterVertically
             ){
                 IconButton(
+                    urlBrowser = "https://www.youtube.com/@reyhanrammadhan09",
                     imgIcRes = painterResource(resource = Res.drawable.ic_email)
                 )
                 IconButton(
+                    urlBrowser = "https://www.linkedin.com/in/reyhan-ramadhan-63a703358",
                     imgIcRes = painterResource(resource = Res.drawable.ic_linkind)
                 )
                 IconButton(
+                    urlBrowser = "https://github.com/reyhanrammadhan09",
                     imgIcRes = painterResource(resource = Res.drawable.ic_github)
                 )
                 IconButton(
+                    urlBrowser = "https://www.instagram.com/reyhanrammadhan09",
                     imgIcRes = painterResource(resource = Res.drawable.ic_instagram)
                 )
                 IconButton(
+                    urlBrowser = "https://www.instagram.com/reyhanrammadhan09",
                     imgIcRes = painterResource(resource = Res.drawable.ic_x_twitter)
                 )
 

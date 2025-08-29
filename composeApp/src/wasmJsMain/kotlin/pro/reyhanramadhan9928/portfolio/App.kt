@@ -9,6 +9,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
+import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Text
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -35,7 +36,8 @@ fun App() {
             .padding(start = 50.dp, end = 50.dp, top = 40.dp, bottom = 35.dp),
         verticalArrangement = Arrangement.SpaceBetween,
         horizontalAlignment = Alignment.CenterHorizontally
-    ) {
+    )
+    {
     /* NavigationBar */
 
         Column(
@@ -136,5 +138,57 @@ fun App() {
                 descText = "Lorem ip sumaco siamet pler la gu cos peler.."
             )
         } // End CardButton-Group
+    }
+}
+
+@Composable
+fun Content01() {
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .background(Color(color = backgroundColor)),
+        verticalArrangement = Arrangement.Top,
+        horizontalAlignment = Alignment.Start
+    ) {
+
+    }
+}
+
+@Composable
+fun Content02() {
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .background(Color(color = backgroundColor)),
+        verticalArrangement = Arrangement.Top,
+        horizontalAlignment = Alignment.Start
+    ) {
+
+    }
+}
+
+@Composable
+fun Content03() {
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .background(Color(color = backgroundColor)),
+        verticalArrangement = Arrangement.Top,
+        horizontalAlignment = Alignment.Start
+    ) {
+
+    }
+}
+
+@Composable
+fun Content04() {
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .background(Color(color = backgroundColor)),
+        verticalArrangement = Arrangement.Top,
+        horizontalAlignment = Alignment.Start
+    ) {
+
     }
 }

@@ -19,12 +19,14 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import org.jetbrains.compose.resources.painterResource
 import reyhanramadhan.composeapp.generated.resources.Res
+import reyhanramadhan.composeapp.generated.resources.ic_close
 import reyhanramadhan.composeapp.generated.resources.ic_email
 import reyhanramadhan.composeapp.generated.resources.ic_github
 import reyhanramadhan.composeapp.generated.resources.ic_home
 import reyhanramadhan.composeapp.generated.resources.ic_information
 import reyhanramadhan.composeapp.generated.resources.ic_instagram
 import reyhanramadhan.composeapp.generated.resources.ic_linkind
+import reyhanramadhan.composeapp.generated.resources.ic_mini_close
 import reyhanramadhan.composeapp.generated.resources.ic_x_twitter
 
 @Composable
@@ -53,12 +55,13 @@ fun App() {
                     .height(80.dp),
                 horizontalArrangement = Arrangement.SpaceBetween,
                 verticalAlignment = Alignment.CenterVertically
-            ){
+            )
+            {
                 Text(
                     text = "Reyhan's Portfolio",
                     fontSize = 55.sp,
                     fontFamily = PoppinsMediumFont(),
-                    color = Color(color = onSurfaceColor)
+                    color = Color(color = onBackgroundImage)
                 )
                 Row(
                     modifier = Modifier
@@ -69,15 +72,18 @@ fun App() {
                 ){
                     IconButton(
                         urlBrowser = null,
-                        imgIcRes = painterResource(resource = Res.drawable.ic_information)
+                        imgIcRes = painterResource(resource = Res.drawable.ic_information),
+                        borderEnable = true
                     )
                     IconButton(
                         urlBrowser = null,
-                        imgIcRes = painterResource(resource = Res.drawable.ic_email)
+                        imgIcRes = painterResource(resource = Res.drawable.ic_email),
+                        borderEnable = true
                     )
                     IconButton(
                         urlBrowser = null,
-                        imgIcRes = painterResource(resource = Res.drawable.ic_home)
+                        imgIcRes = painterResource(resource = Res.drawable.ic_home),
+                        borderEnable = true
                     )
                 }
             }
@@ -87,26 +93,32 @@ fun App() {
                     .height(40.dp),
                 horizontalArrangement = Arrangement.SpaceBetween,
                 verticalAlignment = Alignment.CenterVertically
-            ){
+            )
+            {
                 IconButton(
                     urlBrowser = "https://www.youtube.com/@reyhanrammadhan09",
-                    imgIcRes = painterResource(resource = Res.drawable.ic_email)
+                    imgIcRes = painterResource(resource = Res.drawable.ic_email),
+                    borderEnable = true
                 )
                 IconButton(
                     urlBrowser = "https://www.linkedin.com/in/reyhan-ramadhan-63a703358",
-                    imgIcRes = painterResource(resource = Res.drawable.ic_linkind)
+                    imgIcRes = painterResource(resource = Res.drawable.ic_linkind),
+                    borderEnable = true
                 )
                 IconButton(
                     urlBrowser = "https://github.com/reyhanrammadhan09",
-                    imgIcRes = painterResource(resource = Res.drawable.ic_github)
+                    imgIcRes = painterResource(resource = Res.drawable.ic_github),
+                    borderEnable = true
                 )
                 IconButton(
                     urlBrowser = "https://www.instagram.com/reyhanrammadhan09",
-                    imgIcRes = painterResource(resource = Res.drawable.ic_instagram)
+                    imgIcRes = painterResource(resource = Res.drawable.ic_instagram),
+                    borderEnable = true
                 )
                 IconButton(
                     urlBrowser = "https://www.instagram.com/reyhanrammadhan09",
-                    imgIcRes = painterResource(resource = Res.drawable.ic_x_twitter)
+                    imgIcRes = painterResource(resource = Res.drawable.ic_x_twitter),
+                    borderEnable = true
                 )
 
             }
@@ -120,7 +132,8 @@ fun App() {
                 .height(165.dp),
             horizontalArrangement = Arrangement.SpaceBetween,
             verticalAlignment = Alignment.CenterVertically
-        ){
+        )
+        {
             CardButton(
                 text = "Text Content",
                 descText = "Lorem ip sumaco siamet pler la gu cos peler.."
@@ -146,11 +159,33 @@ fun Content01() {
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .background(Color(color = backgroundColor)),
-        verticalArrangement = Arrangement.Top,
+            .background(Color(color = backgroundColor))
+            .padding(start = 50.dp, end = 50.dp, top = 40.dp, bottom = 35.dp),
+        verticalArrangement = Arrangement.SpaceBetween,
         horizontalAlignment = Alignment.Start
-    ) {
-
+    )
+    {
+    /* button close and page text */
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .height(80.dp),
+            horizontalArrangement = Arrangement.SpaceBetween,
+            verticalAlignment = Alignment.CenterVertically
+        )
+        {
+            Text(
+                text = "About me",
+                fontSize = 50.sp,
+                fontFamily = PoppinsMediumFont(),
+                color = Color(color = onBackground)
+            )
+            IconButton(
+                urlBrowser = null,
+                imgIcRes = painterResource(resource = Res.drawable.ic_mini_close),
+                borderEnable = false
+            )
+        } // end
     }
 }
 
@@ -159,11 +194,33 @@ fun Content02() {
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .background(Color(color = backgroundColor)),
-        verticalArrangement = Arrangement.Top,
+            .background(Color(color = backgroundColor))
+            .padding(start = 50.dp, end = 50.dp, top = 40.dp, bottom = 35.dp),
+        verticalArrangement = Arrangement.SpaceBetween,
         horizontalAlignment = Alignment.Start
-    ) {
-
+    )
+    {
+        /* button close and page text */
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .height(80.dp),
+            horizontalArrangement = Arrangement.SpaceBetween,
+            verticalAlignment = Alignment.CenterVertically
+        )
+        {
+            Text(
+                text = "Resume",
+                fontSize = 50.sp,
+                fontFamily = PoppinsMediumFont(),
+                color = Color(color = onBackground)
+            )
+            IconButton(
+                urlBrowser = null,
+                imgIcRes = painterResource(resource = Res.drawable.ic_mini_close),
+                borderEnable = false
+            )
+        } // end
     }
 }
 
@@ -172,11 +229,33 @@ fun Content03() {
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .background(Color(color = backgroundColor)),
-        verticalArrangement = Arrangement.Top,
+            .background(Color(color = backgroundColor))
+            .padding(start = 50.dp, end = 50.dp, top = 40.dp, bottom = 35.dp),
+        verticalArrangement = Arrangement.SpaceBetween,
         horizontalAlignment = Alignment.Start
-    ) {
-
+    )
+    {
+        /* button close and page text */
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .height(80.dp),
+            horizontalArrangement = Arrangement.SpaceBetween,
+            verticalAlignment = Alignment.CenterVertically
+        )
+        {
+            Text(
+                text = "Service",
+                fontSize = 50.sp,
+                fontFamily = PoppinsMediumFont(),
+                color = Color(color = onBackground)
+            )
+            IconButton(
+                urlBrowser = null,
+                imgIcRes = painterResource(resource = Res.drawable.ic_mini_close),
+                borderEnable = false
+            )
+        } // end
     }
 }
 
@@ -185,10 +264,32 @@ fun Content04() {
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .background(Color(color = backgroundColor)),
-        verticalArrangement = Arrangement.Top,
+            .background(Color(color = backgroundColor))
+            .padding(start = 50.dp, end = 50.dp, top = 40.dp, bottom = 35.dp),
+        verticalArrangement = Arrangement.SpaceBetween,
         horizontalAlignment = Alignment.Start
-    ) {
-
+    )
+    {
+        /* button close and page text */
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .height(80.dp),
+            horizontalArrangement = Arrangement.SpaceBetween,
+            verticalAlignment = Alignment.CenterVertically
+        )
+        {
+            Text(
+                text = "My Project",
+                fontSize = 50.sp,
+                fontFamily = PoppinsMediumFont(),
+                color = Color(color = onBackground)
+            )
+            IconButton(
+                urlBrowser = null,
+                imgIcRes = painterResource(resource = Res.drawable.ic_mini_close),
+                borderEnable = false
+            )
+        } // end
     }
 }

@@ -18,6 +18,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -93,7 +94,15 @@ fun CardButton(text: String, descText: String) {
 
 
 @Composable
-fun IconButton(imgIcRes: Painter, urlBrowser: String?){
+fun IconButton(imgIcRes: Painter, urlBrowser: String?, borderEnable: Boolean){
+    var colorE = Color.Transparent
+    var shapeE = RoundedCornerShape(0.dp)
+
+    if (borderEnable) {
+        colorE = Color(surfaceColor)
+        shapeE = RoundedCornerShape(7.dp)
+    }
+
     Box(
         modifier = Modifier
             .clickable {
@@ -101,8 +110,8 @@ fun IconButton(imgIcRes: Painter, urlBrowser: String?){
             }
             .size(40.dp)
             .background(
-                color = Color(surfaceColor),
-                shape = RoundedCornerShape(7.dp)
+                color = colorE,
+                shape = shapeE
             ),
         contentAlignment = Alignment.Center
     ){
